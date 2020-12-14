@@ -1,0 +1,1 @@
+docker run -v ${PWD#/host_mnt}:/src -p 1111:1111 logdemo
