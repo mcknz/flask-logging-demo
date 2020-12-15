@@ -99,6 +99,15 @@ Two loggers are defined: the unnamed root logger, which logs to console, and the
 }
 ```
 
+Loading the configuration is a one-time activity at the start of the application, in this case within `app.py`:
+
+```py
+from logging import config as logging_config
+from config import settings
+
+logging_config.dictConfig(settings.LOG_CONFIG)
+```
+
 ## Logging Usage
 
 The class `utils.rand.RandNumGen` demonstrates how logging is instantiated and used in code:
